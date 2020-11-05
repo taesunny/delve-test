@@ -20,7 +20,7 @@ WORKDIR /
 COPY --from=build /go/bin/dlv /
 COPY --from=build /server /
 
-CMD ["/dev", "--listen=:4000", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "/server", "--continue", "--log"]
+CMD ["/dlv", "--listen=:4000", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "/server", "--continue", "--log"]
 ## --continue : without it, webserver dosen't work before get debugging request
 
 # docker build -t delve-test:1.0 .
