@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Local Delve remote",
+            "type": "go",
+            "request": "launch", //"launch",
+            "mode": "debug",
+            "program": "${workspaceRoot}/main.go",
+            "host": "127.0.0.1",
+            "port": 4000,
+            "env": {},
+            "args": [],
+            "showLog": true,
+        }
+    ]
+}
+
+// {
+//     "name": "Launch remote",
+//     "type": "go",
+//     "request": "launch", //"launch",
+//     "mode": "debug",
+//     "program": "${workspaceRoot}", //"${fileDirname}",
+//     "remotePath": "/home/sunny/delve/delve-test",
+//     "host": "10.0.0.33",
+//     "port": 4000,
+//     //"env": {},
+//     //"args": [],
+//     "showLog": true,
+//     "trace": "verbose"
+// }
