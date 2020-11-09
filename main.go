@@ -6,9 +6,12 @@ import (
 	"strconv"
 )
 
-var httpRequestCount int = 0
+var httpRequestCount int = -2
 
 func main() {
+	httpRequestCount++
+	httpRequestCount++
+
 	http.HandleFunc("/test", myHandler)
 
 	http.ListenAndServe(":5000", nil)
